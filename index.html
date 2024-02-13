@@ -13,7 +13,7 @@
 
 
 </head>
-<body>
+<body class="m-8">
 
     <header>
 
@@ -21,15 +21,167 @@
 
     <main>
         <!-- Main Content Container -->
-        <div>
+        <div class="flex flex-col md:flex-row gap-[10px]">
             <!-- Shape Card Container -->
-            <div>
+            <div class=" flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-[10px]">
+
+                <!-- Triangle Card -->
+
+                <div class="card card-compact  bg-base-100  border-2 rounded-lg border-gray-200">
+                    <figure><img class="p-3"  src="images/triangle.png" alt="Triangle" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-[30px] text-center flex justify-center">Triangle</h2>
+                        <p class="text-[18px] text-center m-1">Area (A) = 0.5 x b x h </p>
+
+                        <div class="flex gap-3 justify-center m-2">
+                            <div class="flex items-center gap-1">
+
+                                <!-- Added id for calculation-->
+                                <input id="b-triangle" class="w-[95px] bg-slate-100 rounded-sm p-3 text-[18px]" type="text" placeholder="b">
+                                <span class="text-[16px]">cm</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+
+                                <!-- Added id for calculation-->
+                                <input id="h-triangle" class="w-[95px] bg-slate-100 rounded-sm p-3" type="text" placeholder="h">
+                                <span class="text-[16px]">cm</span>
+                            </div>
+                        </div>
+                        <div class="card-actions ">
+
+                            <!-- Onclick -->
+                            <button id="btn-triangle" onclick="triangle()" class="btn btn-primary w-full text-[20px]">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rectangle -->
+
+                <div class="card card-compact  bg-base-100  border-2 border-lg border-gray-200">
+                    <figure><img class="p-3"  src="images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-[30px] text-center flex justify-center">Rectangle</h2>
+                        <p class="text-[18px] text-center m-1">Area (A) = w x l </p>
+                    
+                        <div class="flex gap-3 justify-center m-2">
+                            <div class="flex items-center gap-1">
+                                <input class="w-[95px] bg-slate-100 rounded-sm p-3 text-[18px]" type="text" placeholder="w">
+                                <span class="text-[16px]">cm</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <input class="w-[95px] bg-slate-100 rounded-sm p-3" type="text" placeholder="l">
+                                <span class="text-[16px]">cm</span>
+                            </div>
+                        </div>
+                        <div class="card-actions ">
+                            <button class="btn btn-primary w-full  text-[20px]">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parallelogram -->
+                
+                <div class="card card-compact  bg-base-100  border-2 border-lg border-gray-200">
+                    <figure><img class="p-3"  src="images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-[30px] text-center flex justify-center">Parallelogram</h2>
+                        <p class="text-[18px] text-center m-1">Area (A) = b x h </p>
+                    
+                        <div class="flex gap-3 justify-center m-2">
+                            <div class="flex items-center gap-1">
+                                <input class="w-[95px] bg-slate-100 rounded-sm p-3 text-[18px]" type="text" placeholder="b">
+                                <span class="text-[16px]">cm</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <input class="w-[95px] bg-slate-100 rounded-sm p-3" type="text" placeholder="h">
+                                <span class="text-[16px]">cm</span>
+                            </div>
+                        </div>
+                        <div class="card-actions ">
+                            <button class="btn btn-primary w-full  text-[20px]">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Rhombus Card -->
+                
+                <div class="card card-compact  bg-base-100  border-2 border-lg border-gray-200">
+                    <figure><img class="p-3"  src="images/rhombus.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-[30px] text-center flex justify-center">Rhombus</h2>
+                        <p class="text-[18px] text-center m-1">Area (A) = 0.5 x d1 x d2 </p>
+                    
+                        <div class="flex gap-3 justify-center m-2">
+                            <div class="flex items-center gap-1">
+                                <input class="w-[95px] bg-slate-100 rounded-sm p-3 text-[18px]" type="text" placeholder="b">
+                                <span class="text-[16px]">cm</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <input class="w-[95px] bg-slate-100 rounded-sm p-3" type="text" placeholder="h">
+                                <span class="text-[16px]">cm</span>
+                            </div>
+                        </div>
+                        <div class="card-actions ">
+                            <button class="btn btn-primary w-full  text-[20px]">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pentagon -->
+                
+                <div class="card card-compact  bg-base-100  border-2 border-lg border-gray-200">
+                    <figure><img class="p-3"  src="images/pentagon.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-[30px] text-center flex justify-center">Pentagon</h2>
+                        <p class="text-[18px] text-center m-1">Area (A) = 0.5 x d1 x d2 </p>
+                    
+                        <div class="flex gap-3 justify-center m-2">
+                            <div class="flex items-center gap-1">
+                                <input class="w-[95px] bg-slate-100 rounded-sm p-3 text-[18px]" type="text" placeholder="p">
+                                <span class="text-[16px]">cm</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <input class="w-[95px] bg-slate-100 rounded-sm p-3" type="text" placeholder="b">
+                                <span class="text-[16px]">cm</span>
+                            </div>
+                        </div>
+                        <div class="card-actions ">
+                            <button class="btn btn-primary w-full  text-[20px]">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ellipse -->
+                
+                <div class="card card-compact  bg-base-100 border-2 border-lg border-gray-200">
+                    <figure><img class="p-3" src="images/ellipse.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-[30px] text-center flex justify-center">Ellipse</h2>
+                        <p class="text-[18px] text-center m-1">Area (A) = 3.1416 x a x b</p>
+                    
+                        <div class="flex gap-3 justify-center m-2">
+                            <div class="flex items-center gap-1">
+                                <input class="w-[95px] bg-slate-100 rounded-sm p-3 text-[18px]" type="text" placeholder="a">
+                                <span class="text-[16px]">cm</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <input class="w-[95px] bg-slate-100 rounded-sm p-3" type="text" placeholder="b">
+                                <span class="text-[16px]">cm</span>
+                            </div>
+                        </div>
+                        <div class="card-actions ">
+                            <button class="btn btn-primary w-full  text-[20px]">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
 
             <!-- Area Calculation Container -->
-            <div class="w-[437px]">
-                <h3 class="text-3xl">Area Calculation</h3>
+            <div class="w-96 border-2 border-gray-200 rounded-2xl">
+                <h3 class="text-3xl text-center py-4">Area Calculation</h3>
             </div>
         </div>
     </main>
@@ -38,5 +190,6 @@
 
     </footer>
 
+    <script src="JS/script.js"></script>
 </body>
 </html>
